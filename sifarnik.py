@@ -11,10 +11,14 @@ while True:
         print('Ne moze')
 
     if odabir=='1':
-        pass
+        aplikacija=input('Koja aplikacija')
+        sifra=input('Koja je sifra')
+        sifre[aplikacija]=sifra
 
     if odabir=='2':
-        pass
+        for aplikacija,sifra in sifre.items():
+            print(f'{aplikacija} : {sifra}')
+
 
     if odabir=='3':
         pass
