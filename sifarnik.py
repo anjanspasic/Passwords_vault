@@ -11,7 +11,7 @@ while True:
         print('Ne moze')
 
     if odabir=='1':
-        aplikacija=input('Koja aplikacija')
+        aplikacija=input('Koja aplikacija ')
         sifra=input('Koja je sifra')
         sifre[aplikacija]=sifra
 
@@ -21,10 +21,20 @@ while True:
 
 
     if odabir=='3':
-        pass
+        aplikacija=input('Koju aplikaciju zelite da promenite: ')
+        if aplikacija not in sifre :
+            print('Nepostoji')
+            continue
+        promenjena_sifra=input('Unesite novu sifru: ')
+        sifre[aplikacija]=promenjena_sifra
+        
 
     if odabir=='4':
-        pass
+        aplikacija=input('Od koje aplikacije zelite da obrisete sifru')
+        if aplikacija not in sifre :
+            print('Nepostoji')
+            continue
+        del sifre[aplikacija]
 
     if odabir=='5':
         
